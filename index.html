@@ -39,7 +39,7 @@
     .dot.today  { outline:2px solid #ff9800; outline-offset:1px; }
 
     /* Summary row */
-    .summary-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+    .summary-row { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
     .sc { background:var(--card); border-radius:10px; padding:16px; text-align:center; }
     .sc .num { font-size:24px; font-weight:700; }
     .sc .lbl { font-size:12px; color:var(--text2); margin-top:4px; }
@@ -53,7 +53,7 @@
     .charts-2col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     .chart-label { font-size:12px; font-weight:600; color:var(--text2); margin-bottom:8px; }
     .chart-wrap  { position:relative; height:230px; }
-    .pies-row    { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:20px; }
+    .pies-row    { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:20px; }
     .pie-box     { text-align:center; }
     .pie-wrap    { position:relative; height:110px; }
     .pie-lbl     { font-size:11px; color:var(--text2); margin-top:6px; line-height:1.5; }
@@ -94,7 +94,7 @@
     .days-urgent { background:#fdecea; color:#c62828; }
 
     /* 4 progress bars */
-    .prog-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:12px; }
+    .prog-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:12px; }
     .prog-label { font-size:11px; color:var(--text2); display:flex; justify-content:space-between; margin-bottom:4px; }
     .prog-bg    { background:var(--prog-bg); border-radius:4px; height:6px; }
     .prog-fill  { height:6px; border-radius:4px; transition:width 0.3s; }
