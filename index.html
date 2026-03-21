@@ -25,6 +25,7 @@
     .btn { font-size:12px; padding:7px 14px; border-radius:8px; border:1px solid var(--border); background:var(--card); color:var(--text); cursor:pointer; font-family:sans-serif; }
     .btn:hover { opacity:0.75; }
 
+    /* Streak */
     .streak-card { background:var(--card); border-radius:12px; padding:18px 22px; margin-bottom:16px; }
     .streak-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
     .streak-left .num { font-size:28px; font-weight:700; color:#ff9800; }
@@ -36,15 +37,61 @@
     .dot.active { background:#4caf50; }
     .dot.today  { outline:2px solid #ff9800; outline-offset:1px; }
 
+    /* Summary */
     .summary-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
     .sc { background:var(--card); border-radius:10px; padding:16px; text-align:center; }
     .sc .num { font-size:24px; font-weight:700; }
     .sc .lbl { font-size:12px; color:var(--text2); margin-top:4px; }
 
+    /* Section */
     .section-card { background:var(--card); border-radius:12px; padding:20px 24px; margin-bottom:16px; }
     .section-title { font-size:15px; font-weight:700; margin-bottom:14px; }
     .section-sub { font-size:12px; color:var(--text2); margin:-10px 0 14px; }
 
+    /* Lecture counter */
+    .lec-target-banner {
+      display:flex; align-items:center; justify-content:space-between;
+      background:var(--bg); border-radius:10px; padding:12px 16px;
+      margin-bottom:16px; flex-wrap:wrap; gap:8px;
+      border-left:4px solid #2196f3;
+    }
+    .lec-target-banner .t-label { font-size:13px; font-weight:700; }
+    .lec-target-banner .t-sub   { font-size:12px; color:var(--text2); margin-top:2px; }
+    .lec-target-banner .t-days  { font-size:20px; font-weight:700; color:#2196f3; }
+    .lec-target-banner .t-days span { font-size:12px; color:var(--text2); font-weight:400; }
+
+    .lec-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; margin-bottom:16px; }
+    .lec-box { border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+    .lec-name { font-size:13px; font-weight:700; margin-bottom:10px; }
+    .lec-count-row { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+    .lec-count-row input {
+      width:64px; padding:5px 8px; border:1px solid var(--border);
+      border-radius:6px; font-size:14px; font-weight:700;
+      background:var(--bg); color:var(--text); text-align:center; font-family:sans-serif;
+    }
+    .lec-count-row input:focus { outline:none; border-color:#2196f3; }
+    .lec-of  { font-size:13px; color:var(--text2); }
+    .lec-pct { font-size:12px; font-weight:700; margin-bottom:6px; }
+    .lec-prog-bg   { background:var(--prog-bg); border-radius:4px; height:8px; }
+    .lec-prog-fill { height:8px; border-radius:4px; transition:width 0.3s; }
+    .lec-rem { font-size:11px; color:var(--text2); margin-top:6px; }
+    .lec-pace { font-size:11px; margin-top:4px; font-weight:600; }
+
+    /* Lecture analysis */
+    .lec-analysis-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+    .la-box { border-radius:10px; padding:14px 16px; }
+    .la-box.good   { background:#e6f4ea; }
+    .la-box.warn   { background:#fff8e1; }
+    .la-box.urgent { background:#fdecea; }
+    .la-box.done   { background:#e3f2fd; }
+    [data-theme="dark"] .la-box.good   { background:#1a2d1a; }
+    [data-theme="dark"] .la-box.warn   { background:#2d2a1a; }
+    [data-theme="dark"] .la-box.urgent { background:#2d1a1a; }
+    [data-theme="dark"] .la-box.done   { background:#1a2033; }
+    .la-name { font-size:13px; font-weight:700; margin-bottom:6px; }
+    .la-msg  { font-size:12px; color:var(--text2); line-height:1.6; }
+
+    /* Charts */
     .charts-2col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     .chart-label { font-size:12px; font-weight:600; color:var(--text2); margin-bottom:8px; }
     .chart-wrap  { position:relative; height:230px; }
@@ -54,6 +101,7 @@
     .pie-wrap { position:relative; height:110px; width:100%; max-width:110px; margin:0 auto; }
     .pie-lbl  { font-size:11px; color:var(--text2); margin-top:6px; line-height:1.5; word-break:break-word; }
 
+    /* Pace */
     .cmp-item { margin-bottom:16px; }
     .cmp-item:last-child { margin-bottom:0; }
     .cmp-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:4px; }
@@ -67,6 +115,7 @@
     .bar-study { background:#2196f3; } .bar-time { background:#ff5722; }
     .bar-pct { font-size:11px; color:var(--text2); width:34px; text-align:right; flex-shrink:0; }
 
+    /* Analysis */
     .analysis-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
     .ac { border-radius:10px; padding:14px 16px; }
     .ac.urgent { background:#fdecea; } .ac.warn { background:#fff8e1; } .ac.good { background:#e6f4ea; }
@@ -76,6 +125,7 @@
     .ac-name { font-size:13px; font-weight:700; margin-bottom:6px; }
     .ac-msg  { font-size:12px; color:var(--text2); line-height:1.5; }
 
+    /* Subject cards */
     .subject-card { background:var(--card); border-radius:12px; padding:20px 24px; margin-bottom:16px; }
     .card-header  { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
     .sub-name { font-size:16px; font-weight:700; }
@@ -122,6 +172,7 @@
 <body>
 <div class="container">
 
+  <!-- Header -->
   <div class="page-header">
     <div>
       <h1>CS Executive — Group 2 Exam Tracker</h1>
@@ -133,6 +184,7 @@
     </div>
   </div>
 
+  <!-- Streak -->
   <div class="streak-card">
     <div class="streak-top">
       <div class="streak-left">
@@ -147,18 +199,42 @@
     <div class="day-dots" id="day-dots"></div>
   </div>
 
+  <!-- Summary -->
   <div class="summary-row">
     <div class="sc"><div class="num" id="s-next">—</div><div class="lbl">Days to next exam</div></div>
-    <div class="sc"><div class="num" id="s-lec">0%</div><div class="lbl">Lectures done</div></div>
+    <div class="sc"><div class="num" id="s-lec">0%</div><div class="lbl">Topics done</div></div>
     <div class="sc"><div class="num" id="s-r1">0%</div><div class="lbl">Revision 1 done</div></div>
     <div class="sc"><div class="num" id="s-rem">—</div><div class="lbl">Lectures remaining</div></div>
   </div>
 
+  <!-- Lecture Counter -->
+  <div class="section-card">
+    <div class="section-title">Lecture Completion Tracker</div>
+
+    <!-- Target banner -->
+    <div class="lec-target-banner">
+      <div>
+        <div class="t-label">🎯 Target: Complete all lectures by 20 April 2026</div>
+        <div class="t-sub" id="lec-target-sub"></div>
+      </div>
+      <div>
+        <div class="t-days" id="lec-days-left">— <span>days left</span></div>
+      </div>
+    </div>
+
+    <div class="lec-grid" id="lec-grid"></div>
+
+    <!-- Lecture analysis -->
+    <div class="section-title" style="margin-top:4px;">Lecture Completion Analysis</div>
+    <div class="lec-analysis-grid" id="lec-analysis-grid"></div>
+  </div>
+
+  <!-- Charts -->
   <div class="section-card">
     <div class="section-title">Progress charts</div>
     <div class="charts-2col">
       <div>
-        <div class="chart-label">Lecture & revision % by subject</div>
+        <div class="chart-label">Topic & revision % by subject</div>
         <div class="chart-wrap"><canvas id="bar-chart"></canvas></div>
       </div>
       <div>
@@ -169,37 +245,44 @@
     <div class="pies-row" id="pies-row"></div>
   </div>
 
+  <!-- Pace vs time -->
   <div class="section-card">
     <div class="section-title">Study pace vs time remaining</div>
-    <p class="section-sub">Blue = % lectures done &nbsp;·&nbsp; Red = % of days already passed to exam</p>
+    <p class="section-sub">Blue = % lectures watched &nbsp;·&nbsp; Red = % of days already passed to exam</p>
     <div id="cmp-grid"></div>
   </div>
 
+  <!-- Analysis -->
   <div class="section-card">
-    <div class="section-title">Analysis — where to focus</div>
+    <div class="section-title">Topic analysis — where to focus</div>
     <div class="analysis-grid" id="analysis-grid"></div>
   </div>
 
+  <!-- Subject cards -->
   <div id="subjects-wrapper"></div>
 
 </div>
 <script>
-const STUDY_START = "2026-03-20";
+const STUDY_START  = "2026-03-20";
+const LEC_TARGET   = "2026-04-20";
 
 const subjects = [
   {
     id:"cmsl", name:"Capital Market & Securities Laws", examDate:"2026-06-02",
+    totalLectures:130,
     topics:["SEBI & Regulatory Framework","Securities Contracts","Depositories",
       "Listing Obligations (LODR)","Takeover Code","Insider Trading",
       "Issue of Capital (ICDR)","Stock Exchanges"]
   },
   {
     id:"ecipl", name:"Economic, Commercial & IP Laws", examDate:"2026-06-04",
+    totalLectures:130,
     topics:["Competition Law","Consumer Protection","Foreign Trade Policy",
       "Patents","Trademarks","Copyright","Industrial Designs","Geographical Indications"]
   },
   {
     id:"dtax", name:"Direct Tax", examDate:"2026-06-06",
+    totalLectures:70,
     topics:["Basic Concepts & Residential Status","Heads of Income — Salary",
       "Heads of Income — House Property","Heads of Income — PGBP",
       "Heads of Income — Capital Gains","Heads of Income — Other Sources",
@@ -207,6 +290,7 @@ const subjects = [
   },
   {
     id:"gst", name:"GST", examDate:"2026-06-06",
+    totalLectures:50,
     topics:["Basic Concepts & Levy","Supply","Registration","Valuation",
       "Input Tax Credit","Returns","Payment","Refunds","Exemptions"]
   }
@@ -218,11 +302,13 @@ const loadTheme = () => localStorage.getItem("cs-theme")||"light";
 const saveTheme = t => localStorage.setItem("cs-theme", t);
 
 function daysUntil(d) {
-  const a=new Date(d),b=new Date(); b.setHours(0,0,0,0); a.setHours(0,0,0,0);
+  const a=new Date(d), b=new Date();
+  b.setHours(0,0,0,0); a.setHours(0,0,0,0);
   return Math.round((a-b)/86400000);
 }
 function daysFrom(d) {
-  const a=new Date(d),b=new Date(); b.setHours(0,0,0,0); a.setHours(0,0,0,0);
+  const a=new Date(d), b=new Date();
+  b.setHours(0,0,0,0); a.setHours(0,0,0,0);
   return Math.round((b-a)/86400000);
 }
 function fmtDate(d) {
@@ -256,11 +342,22 @@ function getStudiedDates(progress) {
 }
 function calcStreak(dates) {
   let streak=0, d=new Date();
-  while(true) {
+  while(true){
     const s=d.toISOString().slice(0,10);
     if(dates.has(s)){streak++; d.setDate(d.getDate()-1);} else break;
   }
   return streak;
+}
+
+function saveLectures(subId, val) {
+  const p=load();
+  if(!p[subId]) p[subId]={};
+  p[subId].__lectures = val;
+  p[subId].__lastStudied = Date.now();
+  if(!p[subId].__studyDates) p[subId].__studyDates=[];
+  const td=todayStr();
+  if(!p[subId].__studyDates.includes(td)) p[subId].__studyDates.push(td);
+  save(p); render();
 }
 
 let barInst=null, donutInst=null;
@@ -271,12 +368,25 @@ function ccol() {
   return { text:dark?"#8890a8":"#666", grid:dark?"#2a2d3a":"#eee" };
 }
 
+function lecColor(p) {
+  if(p>=100) return "#1e88e5";
+  if(p>=70)  return "#4caf50";
+  if(p>=40)  return "#ff9800";
+  return "#e53935";
+}
+
 function render() {
   const progress=load(); const cc=ccol();
+  const daysToTarget = daysUntil(LEC_TARGET);
+  const totalLectures = subjects.reduce((a,s)=>a+s.totalLectures,0);
+  const watchedTotal  = subjects.reduce((a,s)=>a+(progress[s.id]?.__lectures||0),0);
+  const remainingTotal= totalLectures - watchedTotal;
 
+  // Header
   document.getElementById("today-label").textContent =
     "Today: "+new Date().toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
 
+  // Streak
   const dates=getStudiedDates(progress);
   const streak=calcStreak(dates);
   document.getElementById("streak-num").textContent=streak+" 🔥";
@@ -292,6 +402,84 @@ function render() {
     dot.title=ds; dotsEl.appendChild(dot);
   }
 
+  // Lecture target banner
+  const daysLeftEl=document.getElementById("lec-days-left");
+  const subEl=document.getElementById("lec-target-sub");
+  if(daysToTarget<0){
+    daysLeftEl.innerHTML=`<span style="color:#e53935;">Target date passed</span>`;
+    subEl.textContent=`${watchedTotal} of ${totalLectures} lectures watched (${remainingTotal} remaining)`;
+  } else {
+    daysLeftEl.innerHTML=`${daysToTarget} <span>days left</span>`;
+    const perDay = daysToTarget>0 ? Math.ceil(remainingTotal/daysToTarget) : remainingTotal;
+    subEl.textContent=`${watchedTotal} of ${totalLectures} watched · ${remainingTotal} left · Need ${perDay} lectures/day to finish on time`;
+  }
+
+  // Lecture counter boxes
+  const lecGrid=document.getElementById("lec-grid");
+  lecGrid.innerHTML="";
+  subjects.forEach(sub=>{
+    const watched = progress[sub.id]?.__lectures||0;
+    const rem     = sub.totalLectures - watched;
+    const p       = pct(watched, sub.totalLectures);
+    const col     = lecColor(p);
+    const perDay  = daysToTarget>0 ? Math.ceil(rem/daysToTarget) : rem;
+    const paceMsg = watched>=sub.totalLectures
+      ? `<span style="color:#1e88e5;">✓ All lectures done!</span>`
+      : daysToTarget<=0
+        ? `<span style="color:#e53935;">Target date passed — ${rem} left</span>`
+        : `Need <strong>${perDay}/day</strong> to finish by 20 Apr`;
+
+    const box=document.createElement("div"); box.className="lec-box";
+    box.innerHTML=`
+      <div class="lec-name">${sub.name}</div>
+      <div class="lec-count-row">
+        <input type="number" min="0" max="${sub.totalLectures}" value="${watched}"
+          id="linput-${sub.id}"
+          onchange="saveLectures('${sub.id}', Math.min(${sub.totalLectures}, Math.max(0, parseInt(this.value)||0)))"
+          oninput="updateLecBox('${sub.id}', Math.min(${sub.totalLectures}, Math.max(0, parseInt(this.value)||0)))" />
+        <span class="lec-of">/ ${sub.totalLectures} lectures</span>
+      </div>
+      <div class="lec-pct" id="lpct-${sub.id}" style="color:${col};">${p}% complete</div>
+      <div class="lec-prog-bg">
+        <div class="lec-prog-fill" id="lfill-${sub.id}" style="width:${p}%;background:${col};"></div>
+      </div>
+      <div class="lec-rem" id="lrem-${sub.id}">${rem} lectures remaining</div>
+      <div class="lec-pace">${paceMsg}</div>`;
+    lecGrid.appendChild(box);
+  });
+
+  // Lecture analysis
+  const lecAnalGrid=document.getElementById("lec-analysis-grid");
+  lecAnalGrid.innerHTML="";
+  subjects.forEach(sub=>{
+    const watched=progress[sub.id]?.__lectures||0;
+    const rem=sub.totalLectures-watched;
+    const p=pct(watched,sub.totalLectures);
+    const perDay=daysToTarget>0?Math.ceil(rem/daysToTarget):rem;
+    let cls,msg;
+    if(watched>=sub.totalLectures){
+      cls="done";
+      msg=`All ${sub.totalLectures} lectures completed! You are fully ready for revision.`;
+    } else if(daysToTarget<=0){
+      cls="urgent";
+      msg=`Target date passed. Still ${rem} lectures left. Complete them as soon as possible.`;
+    } else if(p>=70){
+      cls="good";
+      msg=`${p}% done — great pace! ${rem} left. Need ${perDay}/day to hit 20 Apr target.`;
+    } else if(p>=40){
+      cls="warn";
+      msg=`${p}% done. ${rem} lectures left. You need ${perDay}/day — pick up the pace!`;
+    } else {
+      cls="urgent";
+      msg=`Only ${p}% done. ${rem} lectures remaining. Need ${perDay}/day — urgent action needed!`;
+    }
+    lecAnalGrid.innerHTML+=`<div class="la-box ${cls}">
+      <div class="la-name">${sub.name}</div>
+      <div class="la-msg">${msg}</div>
+    </div>`;
+  });
+
+  // Topic stats
   let gTotal=0,gLec=0,gR1=0,gLecRem=0;
   const stats=subjects.map(sub=>{
     const sp=progress[sub.id]||{};
@@ -307,7 +495,7 @@ function render() {
 
   document.getElementById("s-lec").textContent=pct(gLec,gTotal)+"%";
   document.getElementById("s-r1").textContent=pct(gR1,gTotal)+"%";
-  document.getElementById("s-rem").textContent=gLecRem+" topics";
+  document.getElementById("s-rem").textContent=remainingTotal+" lecs";
   const up=subjects.map(s=>daysUntil(s.examDate)).filter(d=>d>=0);
   document.getElementById("s-next").textContent=up.length?Math.min(...up):"Done";
 
@@ -316,11 +504,12 @@ function render() {
     return w.length>3?w.slice(0,3).join(" ")+"…":s.sub.name;
   });
 
+  // Bar chart
   if(barInst) barInst.destroy();
   barInst=new Chart(document.getElementById("bar-chart"),{
     type:"bar",
     data:{labels:snames,datasets:[
-      {label:"Lectures",   data:stats.map(s=>s.lecPct),backgroundColor:"#2196f3"},
+      {label:"Topics done",data:stats.map(s=>s.lecPct),backgroundColor:"#2196f3"},
       {label:"Revision 1", data:stats.map(s=>s.r1Pct), backgroundColor:"#ff9800"},
       {label:"Revision 2", data:stats.map(s=>s.r2Pct), backgroundColor:"#9c27b0"},
       {label:"Revision 3", data:stats.map(s=>s.r3Pct), backgroundColor:"#4caf50"}
@@ -334,6 +523,7 @@ function render() {
     }
   });
 
+  // Donut
   const totDone=stats.reduce((a,s)=>a+s.lec+s.r1+s.r2+s.r3,0);
   const totMax=stats.reduce((a,s)=>a+s.n*4,0);
   if(donutInst) donutInst.destroy();
@@ -349,6 +539,7 @@ function render() {
     }
   });
 
+  // Pie charts
   const piesRow=document.getElementById("pies-row");
   piesRow.innerHTML="";
   stats.forEach(({sub,n,lec,r1,r2,r3,overPct},idx)=>{
@@ -373,6 +564,7 @@ function render() {
     },50);
   });
 
+  // Pace vs time
   const cmpGrid=document.getElementById("cmp-grid");
   cmpGrid.innerHTML="";
   stats.forEach(({sub,lecPct})=>{
@@ -390,7 +582,7 @@ function render() {
         <span class="cmp-status ${cls}">${msg}</span>
       </div>
       <div class="bar-row">
-        <span class="bar-lbl">Lectures done</span>
+        <span class="bar-lbl">Topics done</span>
         <div class="bar-bg"><div class="bar-fill bar-study" style="width:${lecPct}%"></div></div>
         <span class="bar-pct">${lecPct}%</span>
       </div>
@@ -402,12 +594,13 @@ function render() {
     cmpGrid.appendChild(item);
   });
 
+  // Topic analysis
   document.getElementById("analysis-grid").innerHTML=stats.map(({sub,n,lec,r1,lecPct})=>{
     const days=daysUntil(sub.examDate);
     let cls,msg;
-    if(lecPct<40){cls="urgent";msg=`Only ${lecPct}% lectures done. ${n-lec} topics still to cover. Needs immediate attention!`;}
-    else if(lecPct<80){cls="warn";msg=`${lecPct}% lectures done. ${n-lec} topics remaining. Start Revision 1 soon.`;}
-    else{cls="good";msg=`Lectures almost done! Focus on revisions — ${n-r1} topics need Revision 1.`;}
+    if(lecPct<40){cls="urgent";msg=`Only ${lecPct}% topics ticked. ${n-lec} topics still to cover. Needs immediate attention!`;}
+    else if(lecPct<80){cls="warn";msg=`${lecPct}% topics done. ${n-lec} remaining. Start Revision 1 soon.`;}
+    else{cls="good";msg=`Topics almost done! Focus on revisions — ${n-r1} topics need Revision 1.`;}
     return `<div class="ac ${cls}">
       <div class="ac-name">${sub.name}</div>
       <div class="ac-msg">${msg}</div>
@@ -415,6 +608,7 @@ function render() {
     </div>`;
   }).join("");
 
+  // Subject cards
   const wrap=document.getElementById("subjects-wrapper");
   wrap.innerHTML="";
   stats.forEach(({sub,n,lec,r1,r2,r3,lecPct,r1Pct,r2Pct,r3Pct})=>{
@@ -440,7 +634,7 @@ function render() {
       </div>
       <div class="prog-grid">
         <div>
-          <div class="prog-label"><span>Lectures</span><span>${lecPct}%</span></div>
+          <div class="prog-label"><span>Topics done</span><span>${lecPct}%</span></div>
           <div class="prog-bg"><div class="prog-fill p-lec" style="width:${lecPct}%"></div></div>
         </div>
         <div>
@@ -457,7 +651,7 @@ function render() {
         </div>
       </div>
       <div class="rem-row">
-        <span class="rem-badge">${n-lec} lectures left</span>
+        <span class="rem-badge">${n-lec} topics left</span>
         <span class="rem-badge">${n-r1} Rev 1 left</span>
         <span class="rem-badge">${n-r2} Rev 2 left</span>
         <span class="rem-badge">${n-r3} Rev 3 left</span>
@@ -476,6 +670,25 @@ function render() {
       </table>`;
     wrap.appendChild(card);
   });
+}
+
+function updateLecBox(subId, val) {
+  const col=lecColor(pct(val, subjects.find(s=>s.id===subId).totalLectures));
+  const total=subjects.find(s=>s.id===subId).totalLectures;
+  const p=pct(val,total);
+  const el=document.getElementById("lfill-"+subId);
+  const pe=document.getElementById("lpct-"+subId);
+  const re=document.getElementById("lrem-"+subId);
+  if(el){ el.style.width=p+"%"; el.style.background=col; }
+  if(pe){ pe.textContent=p+"% complete"; pe.style.color=col; }
+  if(re){ re.textContent=(total-val)+" lectures remaining"; }
+}
+
+function lecColor(p) {
+  if(p>=100) return "#1e88e5";
+  if(p>=70)  return "#4caf50";
+  if(p>=40)  return "#ff9800";
+  return "#e53935";
 }
 
 function toggle(subId,topic,col,checked){
